@@ -27,7 +27,7 @@ export default {
         aria-role="list"
       >
         <!-- The selected/default item within the dropdown -->
-        <o-button variant="primary" type="button" slot="trigger">
+        <o-button variant="default" slot="trigger">
           <span>Selected ({{ selectedOptions.length }})</span>
           <o-icon icon="caret-down"></o-icon>
         </o-button>
@@ -57,17 +57,13 @@ export default {
 .dropdown-root {
   @apply block w-64;
 }
-/* Button to trigger */
-.dropdown-trigger { 
-  @apply px-4 py-2 border rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50;
-}
 /* Whole menu */
 .dropdown-menu {
-  @apply text-gray-900 border border-gray-300 shadow-lg rounded-sm z-10;
+  @apply text-gray-900 border border-gray-300 shadow-lg rounded-md z-10;
 }
 /* Item itself */
 .dropdown-item {
-  @apply cursor-pointer block px-4 py-2 bg-white hover:bg-gray-100 text-gray-700;
+  @apply cursor-pointer block px-4 py-2 bg-white hover:bg-gray-100 text-gray-700 z-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500;
 }
 /* Active item */
 .dropdown-item-active {

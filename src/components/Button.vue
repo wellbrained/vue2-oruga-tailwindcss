@@ -11,32 +11,29 @@ export default {
 <template>
   <section>
 		<ComponentHeader title="Button">
-      Different kind of buttons with the approriate styling.
+      Different kind of buttons with the approriate styling. The type will be defined per `variant` prop.
     </ComponentHeader>
 		
     <div class="grid grid-cols-2">
       <div class="flex">
-        <o-button
-          variant="default"
-          class="inline-flex justify-center px-4 py-2 ml-3 text-sm font-medium border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2"
-          >Default</o-button
-        >
-        <o-button
-          variant="primary"
-          class="inline-flex justify-center px-4 py-2 ml-3 text-sm font-medium border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2"
-          >Primary</o-button
-        >
-        <o-button
-          variant="danger"
-          class="inline-flex justify-center px-4 py-2 ml-3 text-sm font-medium border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2"
-          >Error / Danger</o-button
-        >
+        <o-button variant="default">
+          Default
+        </o-button>
+        <o-button variant="primary" class="ml-3">
+          Primary
+        </o-button>
+        <o-button variant="danger" class="ml-3">
+          Error / Danger
+        </o-button>
       </div>
     </div>
   </section>
 </template>
 
-<style>
+<style lang="postcss">
+.button-root {
+  @apply inline-flex justify-center px-4 py-2 text-sm font-medium border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
 .button-default {
   @apply bg-white hover:bg-gray-50 text-gray-700 border-gray-300 focus:ring-blue-500;
 }

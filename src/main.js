@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import Oruga from '@oruga-ui/oruga';
-import '@oruga-ui/oruga/dist/oruga-full.css'
+import '@oruga-ui/oruga/dist/oruga.css'
 import './assets/tailwind.css'
 
 Vue.config.productionTip = false
@@ -13,9 +13,7 @@ Vue.use(Oruga, {
     variantClass: 'button-'
   },
   datepicker : {
-    override: true,
     rootClass: 'datepicker-root',
-    variantClass: 'button-'
   },
   dropdown : {
     override: true,
