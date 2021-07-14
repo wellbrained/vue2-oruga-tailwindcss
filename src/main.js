@@ -7,12 +7,19 @@ import './assets/tailwind.css'
 Vue.config.productionTip = false
 
 Vue.use(Oruga, {
+  field: {
+    override: true,
+    rootClass: 'field-root',
+    variantClass: 'field-',
+    messageClass: 'field-message',
+  },
   button : {
     override: true,
     rootClass: 'button-root',
     variantClass: 'button-'
   },
   datepicker : {
+    override: true,
     rootClass: 'datepicker-root',
   },
   dropdown : {
@@ -26,6 +33,9 @@ Vue.use(Oruga, {
   select : {
     override: true,
     rootClass: 'select-root',
+    selectClass: 'select-item',
+    variantClass: 'select-',
+    iconRightClass: 'select-iron-right'
   },
 })
 

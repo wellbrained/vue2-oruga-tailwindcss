@@ -2,9 +2,9 @@
 import ComponentHeader from '@/components/shared/ComponentHeader.vue'
 
 export default {
-	components: {
-		ComponentHeader,
-	},
+  components: {
+    ComponentHeader,
+  },
   data() {
     return {
       dates: [],

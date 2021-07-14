@@ -1,16 +1,16 @@
 <script>
 import ComponentHeader from '@/components/shared/ComponentHeader.vue'
 
-  export default {
-	components: {
-		ComponentHeader,
-	},
-    data() {
-      return {
-        selectedOptions: []
-      }
+export default {
+  components: {
+    ComponentHeader,
+  },
+  data() {
+    return {
+      selectedOptions: []
     }
   }
+}
 </script>
 
 <template>
@@ -37,7 +37,7 @@ import ComponentHeader from '@/components/shared/ComponentHeader.vue'
         </o-select>
       </o-field>
   
-      <o-field label="Disabled">
+      <o-field label="Disabled" message="This field is disabled">
         <o-select placeholder="Select a character" disabled>
           <option value="flint">Flint</option>
           <option value="silver">Silver</option>
@@ -48,7 +48,10 @@ import ComponentHeader from '@/components/shared/ComponentHeader.vue'
 </template>
 
 <style lang="postcss">
-.select-root {
-  @apply block w-64 px-3 py-2 border rounded-md border-gray-300;
+.select-item {
+  @apply block pl-4 py-2 border rounded-md border-gray-300;
+}
+.select-danger {
+  @apply border-red-500;
 }
 </style>

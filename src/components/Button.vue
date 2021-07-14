@@ -2,23 +2,23 @@
 import ComponentHeader from '@/components/shared/ComponentHeader.vue'
 
 export default {
-	components: {
-		ComponentHeader,
-	},
+  components: {
+    ComponentHeader,
+  },
 };
 </script>
 
 <template>
   <section>
-		<ComponentHeader title="Button">
+    <ComponentHeader title="Button">
       Different kind of buttons with the approriate styling. The type will be defined per `variant` prop.
     </ComponentHeader>
-		
+ 
     <div class="grid grid-cols-2">
       <div class="flex">
         <o-button variant="default">
           Default
-        </o-button>
+        </o-button> 
         <o-button variant="primary" class="ml-3">
           Primary
         </o-button>
