@@ -9,9 +9,14 @@ const themeSwapperConfig = {
       selectors: [':root'],
       theme: {
         colors: {
-          base: colors.white,
-          primary: colors.orange['500'],
-        },
+					primary: colors.blueGray['700'],
+					'primary-hover': colors.blueGray['800'],
+					accent: colors.blue['700'],
+				},
+				backgroundColor: {
+					base: colors.blueGray['50'],
+					'base-hover': colors.blueGray['100'],
+				},
         borderColor: {
           cool: 'orange',
         },
@@ -26,9 +31,14 @@ const themeSwapperConfig = {
       // mediaQuery: '@media (prefers-color-scheme: dark)',
       theme: {
         colors: {
-          base: colors.gray['50'],
-          primary: colors.gray['800'],
+					primary: colors.blueGray['100'],
+					'primary-hover': colors.blueGray['200'],
+					accent: colors.blue['500'],
         },
+				backgroundColor: {
+					base: colors.blueGray['800'],
+					'base-hover': colors.blueGray['900'],
+				},
         borderColor: {
           cool: 'aqua',
         },
@@ -43,9 +53,14 @@ const themeSwapperConfig = {
       // mediaQuery: '@media (prefers-color-scheme: test)',
       theme: {
         colors: {
-          base: colors.red['100'],
-          primary: colors.red['700'],
-        },
+					primary: colors.blueGray['700'],
+					'primary-hover': colors.blueGray['800'],
+					accent: colors.purple['700'],
+				},
+				backgroundColor: {
+					base: colors.purple['100'],
+					'base-hover': colors.purple['200'],
+				},
         borderColor: {
           cool: 'tomato',
         },

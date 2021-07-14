@@ -12,6 +12,7 @@ Vue.use(Oruga, {
     rootClass: 'field-root',
     variantClass: 'field-',
     messageClass: 'field-message',
+    labelClass: 'field-label',
   },
   button : {
     override: true,

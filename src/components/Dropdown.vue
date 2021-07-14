@@ -45,7 +45,7 @@ export default {
         </o-dropdown-item>
       </o-dropdown>
 
-      <p class="p-2">
+      <p class="p-2 text-primary">
         <b>selected</b>: {{ selectedOptions }}
       </p>
     </div>
@@ -59,14 +59,14 @@ export default {
 }
 /* Whole menu */
 .dropdown-menu {
-  @apply text-gray-900 border border-gray-300 shadow-lg rounded-md z-10;
+  @apply text-primary border border-gray-300 shadow-lg rounded-md z-10;
 }
 /* Item itself */
 .dropdown-item {
-  @apply cursor-pointer block px-4 py-2 bg-white hover:bg-gray-100 text-gray-700 z-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500;
+  @apply cursor-pointer block px-4 py-2 bg-base hover:bg-base-hover text-gray-700 z-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500;
 }
 /* Active item */
 .dropdown-item-active {
-  @apply bg-blue-100 text-blue-900 hover:bg-gray-100 hover:text-gray-700;
+  @apply bg-base text-primary hover:bg-base-hover hover:text-primary-hover;
 }
 </style>
