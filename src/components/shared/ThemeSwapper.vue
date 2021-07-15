@@ -16,7 +16,6 @@ export default {
   },
   mounted () {
     const theme = this.themes.filter(x => x.name === 'base')[0]
-    console.log(theme)
     this.selectedTheme = theme
   },
   methods: {
