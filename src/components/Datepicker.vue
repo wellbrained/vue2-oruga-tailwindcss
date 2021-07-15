@@ -5,26 +5,25 @@ export default {
   components: {
     ComponentHeader,
   },
-  data() {
+  data () {
     return {
       dates: [],
-    };
+    }
   },
-};
+}
 </script>
 
 <template>
-	<section>
-		<ComponentHeader title="Datepicker" />
-		
-		<o-field label="Select a date">
-			<o-datepicker
-				placeholder="Click to select..."
-				icon="calendar"
-				v-model="dates"
-				range
-			>
-			</o-datepicker>
-		</o-field>
-	</section>
+  <section>
+    <ComponentHeader title="Datepicker" />
+
+    <o-field label="Select a date">
+      <o-datepicker
+        v-model="dates"
+        placeholder="Click to select..."
+        icon="calendar"
+        range
+      />
+    </o-field>
+  </section>
 </template>

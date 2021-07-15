@@ -1,6 +1,6 @@
 import Vue from 'vue'
+import Oruga from '@oruga-ui/oruga'
 import App from './App.vue'
-import Oruga from '@oruga-ui/oruga';
 import '@oruga-ui/oruga/dist/oruga.css'
 import './assets/tailwind.css'
 
@@ -14,16 +14,16 @@ Vue.use(Oruga, {
     messageClass: 'field-message',
     labelClass: 'field-label',
   },
-  button : {
+  button: {
     override: true,
     rootClass: 'button-root',
     variantClass: 'button-'
   },
-  datepicker : {
+  datepicker: {
     override: true,
     rootClass: 'datepicker-root',
   },
-  dropdown : {
+  dropdown: {
     override: true,
     rootClass: 'dropdown-root',
     triggerClass: 'dropdown-trigger',
@@ -31,7 +31,7 @@ Vue.use(Oruga, {
     itemClass: 'dropdown-item',
     itemActiveClass: 'dropdown-item-active',
   },
-  select : {
+  select: {
     override: true,
     rootClass: 'select-root',
     selectClass: 'select-item',

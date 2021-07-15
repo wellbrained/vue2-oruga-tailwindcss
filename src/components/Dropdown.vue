@@ -5,17 +5,17 @@ export default {
   components: {
     ComponentHeader,
   },
-  data() {
+  data () {
     return {
       selectedOptions: [],
-    };
+    }
   },
-};
+}
 </script>
 
 <template>
   <section>
-		<ComponentHeader title="Dropdown">
+    <ComponentHeader title="Dropdown">
       Dropdown does use custom styling.
     </ComponentHeader>
 
@@ -27,9 +27,9 @@ export default {
         aria-role="list"
       >
         <!-- The selected/default item within the dropdown -->
-        <o-button variant="default" slot="trigger">
+        <o-button slot="trigger" variant="default">
           <span>Selected ({{ selectedOptions.length }})</span>
-          <o-icon icon="caret-down"></o-icon>
+          <o-icon icon="caret-down" />
         </o-button>
 
         <o-dropdown-item value="option1" aria-role="listitem">
@@ -55,7 +55,7 @@ export default {
 <style lang="postcss">
 /* Root of the whole Dropdown */
 .dropdown-root {
-  @apply block w-64;
+  @apply block;
 }
 /* Whole menu */
 .dropdown-menu {

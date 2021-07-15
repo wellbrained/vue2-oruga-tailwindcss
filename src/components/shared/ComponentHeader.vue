@@ -10,11 +10,13 @@ export default {
 </script>
 
 <template>
-	<div>
-		<h2 class="pb-2 text-xl font-medium text-accent">Component: {{ title }}</h2>
-		<p v-if="$slots.default" class="pb-4 text-sm text-primary">
-			<b>Description:</b>
-			<slot></slot>
-		</p>
-	</div>
+  <div>
+    <h2 class="pb-2 text-xl font-medium text-accent">
+      Component: {{ title }}
+    </h2>
+    <p v-if="$slots.default" class="pb-4 text-sm text-primary">
+      <b>Description:</b>
+      <slot />
+    </p>
+  </div>
 </template>
