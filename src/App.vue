@@ -21,8 +21,8 @@ export default {
   <div id="app">
     <PageHeader />
 
-    <div class="px-8 mx-auto max-w-7xl">
-      <div class="grid grid-cols-2 gap-4 p-4 mt-8 space-y-8">
+    <div class="mx-auto max-w-7xl">
+      <div class="grid grid-cols-2 gap-8 p-4 mt-8 space-y-8">
         <Button />
         <Datepicker />
         <Dropdown />

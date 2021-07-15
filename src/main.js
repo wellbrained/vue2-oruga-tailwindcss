@@ -1,12 +1,16 @@
 import Vue from 'vue'
 import Oruga from '@oruga-ui/oruga'
+import MyIconComponent from '@/components/Icons.vue'
 import App from './App.vue'
 import '@oruga-ui/oruga/dist/oruga.css'
 import './assets/tailwind.css'
 
 Vue.config.productionTip = false
 
+Vue.component('myiconpack-component', MyIconComponent)
 Vue.use(Oruga, {
+  iconPack: 'myiconpack',
+  iconComponent: 'myiconpack-component',
   field: {
     override: true,
     rootClass: 'field-root',
@@ -30,6 +34,7 @@ Vue.use(Oruga, {
     menuClass: 'dropdown-menu',
     itemClass: 'dropdown-item',
     itemActiveClass: 'dropdown-item-active',
+    menuPositionClass: 'dropdown-position-',
   },
   select: {
     override: true,
