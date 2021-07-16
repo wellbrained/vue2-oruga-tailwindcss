@@ -7,10 +7,14 @@ import './assets/tailwind.css'
 
 Vue.config.productionTip = false
 
-Vue.component('myiconpack-component', MyIconComponent)
+Vue.component('custom-iconpack', MyIconComponent)
 Vue.use(Oruga, {
-  iconPack: 'myiconpack',
-  iconComponent: 'myiconpack-component',
+  iconPack: 'Custom Icons',
+  iconComponent: 'custom-iconpack',
+  icon: {
+    rootClass: 'icon-root',
+    variantClass: 'icon-variant',
+  },
   field: {
     override: true,
     rootClass: 'field-root',
@@ -21,14 +25,15 @@ Vue.use(Oruga, {
   button: {
     override: true,
     rootClass: 'button-root',
-    variantClass: 'button-'
+    elementsWrapperClass: 'button-wrapper',
+    iconClass: 'button-icon',
+    variantClass: 'button-',
   },
   datepicker: {
     override: true,
     rootClass: 'datepicker-root',
   },
   dropdown: {
-    override: true,
     rootClass: 'dropdown-root',
     triggerClass: 'dropdown-trigger',
     menuClass: 'dropdown-menu',

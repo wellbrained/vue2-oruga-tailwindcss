@@ -32,9 +32,9 @@ export default {
           multiple
         >
           <!-- The selected/default item within the dropdown -->
-          <o-button slot="trigger" variant="default">
+          <o-button slot="trigger" slot-scope="{ active }" variant="default">
             <span>Selected ({{ selectedOptions.length }})</span>
-            <o-icon icon="caret-down" />
+            <o-icon :icon="active ? 'chevron-up' : 'chevron-down'" />
           </o-button>
 
           <div class="p-1 space-y-1">
@@ -66,9 +66,9 @@ export default {
           multiple
         >
           <!-- The selected/default item within the dropdown -->
-          <o-button slot="trigger" variant="default">
+          <o-button slot="trigger" slot-scope="{ active }" variant="default">
             <span>Selected ({{ selectedOptions2.length }})</span>
-            <o-icon icon="caret-down" />
+            <o-icon :icon="active ? 'chevron-up' : 'chevron-down'" />
           </o-button>
 
           <div class="p-1 space-y-1">
@@ -100,9 +100,9 @@ export default {
           multiple
         >
           <!-- The selected/default item within the dropdown -->
-          <o-button slot="trigger" variant="default">
+          <o-button slot="trigger" slot-scope="{ active }" variant="default">
             <span>Selected ({{ selectedOptions3.length }})</span>
-            <o-icon icon="caret-down" />
+            <o-icon :icon="active ? 'chevron-up' : 'chevron-down'" />
           </o-button>
 
           <div class="p-1 space-y-1">
@@ -134,9 +134,9 @@ export default {
           multiple
         >
           <!-- The selected/default item within the dropdown -->
-          <o-button slot="trigger" variant="default">
+          <o-button slot="trigger" slot-scope="{ active }" variant="default">
             <span>Selected ({{ selectedOptions4.length }})</span>
-            <o-icon icon="caret-down" />
+            <o-icon :icon="active ? 'chevron-up' : 'chevron-down'" />
           </o-button>
 
           <div class="p-1 space-y-1">
@@ -174,10 +174,10 @@ export default {
   @apply ring-1 ring-black ring-opacity-5 focus:outline-none;
 }
 .dropdown-position-top-left {
-  @apply bottom-0 right-0 mb-12;
+  @apply bottom-0 right-0 mb-2;
 }
 .dropdown-position-top-right {
-  @apply bottom-0 left-0 mb-12;
+  @apply bottom-0 left-0 mb-2;
 }
 .dropdown-position-bottom-left {
   @apply right-0 mt-2;

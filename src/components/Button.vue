@@ -46,6 +46,12 @@ export default {
   @apply text-sm font-medium rounded-md shadow-sm border;
   @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
 }
+.button-wrapper {
+  @apply inline-flex;
+}
+.button-icon {
+  @apply px-1;
+}
 .button-default {
   @apply bg-white hover:bg-gray-50 text-gray-700 border-gray-300 focus:ring-blue-500;
 }
