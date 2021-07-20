@@ -5,6 +5,7 @@ import ChevronLeft from '@/components/icons/ChevronLeft.vue'
 import ChevronRight from '@/components/icons/ChevronRight.vue'
 import Calendar from '@/components/icons/Calendar.vue'
 import Beaker from '@/components/icons/Beaker.vue'
+import DotsVertical from '@/components/icons/DotsVertical.vue'
 
 export default {
   name: 'MyIconComponent',
@@ -14,6 +15,7 @@ export default {
     ChevronLeft,
     ChevronRight,
     Calendar,
+    DotsVertical,
     Beaker,
   },
   props: {

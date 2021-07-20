@@ -15,7 +15,6 @@ export default {
       Component: {{ title }}
     </h2>
     <p v-if="$slots.default" class="pb-4 text-sm text-primary">
-      <b>Description:</b>
       <slot />
     </p>
   </div>

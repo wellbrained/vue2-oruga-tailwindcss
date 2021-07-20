@@ -12,6 +12,7 @@ Vue.use(Oruga, {
   iconPack: 'Custom Icons',
   iconComponent: 'custom-iconpack',
   icon: {
+    override: true,
     rootClass: 'icon-root',
     variantClass: 'icon-variant',
   },
@@ -34,6 +35,7 @@ Vue.use(Oruga, {
     rootClass: 'datepicker-root',
   },
   dropdown: {
+    override: true,
     rootClass: 'dropdown-root',
     triggerClass: 'dropdown-trigger',
     menuClass: 'dropdown-menu',

@@ -21,8 +21,8 @@ export default {
   <div id="app">
     <PageHeader />
 
-    <div class="mx-auto max-w-7xl">
-      <div class="grid grid-cols-2 gap-8 p-4 mt-8 space-y-8">
+    <div class="mx-auto mt-8 mb-16 max-w-7xl">
+      <div class="grid grid-cols-2 gap-4">
         <Button />
         <Datepicker />
         <Dropdown />
@@ -33,21 +33,9 @@ export default {
 </template>
 
 <style lang="postcss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-}
+@import url(https://rsms.me/inter/inter.css);
 
-/* Styling for the general fields */
-.field-message {
-  @apply text-sm mt-1 text-primary;
-}
-.field-label {
-  @apply text-primary;
-}
-.field-danger {
-  @apply text-red-500;
+#app section {
+  @apply border border-gray-200 px-4 py-8 rounded shadow-sm h-full;
 }
 </style>

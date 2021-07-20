@@ -10,7 +10,7 @@ export default {
 
 <template>
   <div as="nav" class="bg-gray-800">
-    <div class="px-8 mx-auto max-w-7xl">
+    <div class="pl-4 mx-auto max-w-7xl">
       <div class="flex justify-between h-16">
         <div class="flex">
           <div class="flex items-center">

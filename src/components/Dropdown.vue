@@ -1,16 +1,19 @@
 <script>
 import ComponentHeader from '@/components/shared/ComponentHeader.vue'
+import ComponentFooter from '@/components/shared/ComponentFooter.vue'
 
 export default {
   components: {
+    ComponentFooter,
     ComponentHeader,
   },
   data () {
     return {
-      selectedOptions: [],
+      selectedOptions1: [],
       selectedOptions2: [],
       selectedOptions3: [],
       selectedOptions4: [],
+      selectedOptions5: [],
     }
   },
 }
@@ -23,141 +26,187 @@ export default {
     </ComponentHeader>
 
     <div class="flex flex-col space-y-4">
-      <div class="flex items-center space-x-10">
-        <span class="w-24">Bottom left:</span>
-        <o-dropdown
-          v-model="selectedOptions"
-          position="bottom-left"
-          aria-role="list"
-          multiple
-        >
-          <!-- The selected/default item within the dropdown -->
-          <o-button slot="trigger" slot-scope="{ active }" variant="default">
-            <span>Selected ({{ selectedOptions.length }})</span>
-            <o-icon :icon="active ? 'chevron-up' : 'chevron-down'" />
-          </o-button>
+      <!-- ROW #1 -->
+      <div class="grid grid-cols-3">
+        <o-field label="bottom left">
+          <o-dropdown
+            v-model="selectedOptions1"
+            position="bottom-left"
+            aria-role="list"
+            multiple
+          >
+            <o-button slot="trigger" slot-scope="{ active }" variant="default">
+              <span>Selected ({{ selectedOptions1.length }})</span>
+              <o-icon class="ml-2 -mr-1" :icon="active ? 'chevron-up' : 'chevron-down'" />
+            </o-button>
 
-          <div class="p-1 space-y-1">
-            <o-dropdown-item value="option1" aria-role="listitem">
-              <span>Option 1</span>
-            </o-dropdown-item>
+            <div class="p-1 space-y-1">
+              <o-dropdown-item value="option1" aria-role="listitem">
+                <span>Option 1</span>
+              </o-dropdown-item>
 
-            <o-dropdown-item value="option2" aria-role="listitem">
-              <span>Option 2</span>
-            </o-dropdown-item>
+              <o-dropdown-item value="option2" aria-role="listitem">
+                <span>Option 2</span>
+              </o-dropdown-item>
 
-            <o-dropdown-item value="option3" aria-role="listitem">
-              <span>Option 3</span>
-            </o-dropdown-item>
-          </div>
-        </o-dropdown>
+              <o-dropdown-item value="option3" aria-role="listitem">
+                <span>Option 3</span>
+              </o-dropdown-item>
+            </div>
+          </o-dropdown>
+        </o-field>
 
-        <p class="p-2 text-sm text-primary">
-          <b>selected</b>: {{ selectedOptions }}
+        <p class="col-span-2 p-2 text-sm text-primary">
+          <b>selected</b>: {{ selectedOptions1 }}
         </p>
       </div>
 
-      <div class="flex items-center space-x-10">
-        <span class="w-24">Bottom right:</span>
-        <o-dropdown
-          v-model="selectedOptions2"
-          position="bottom-right"
-          aria-role="list"
-          multiple
-        >
-          <!-- The selected/default item within the dropdown -->
-          <o-button slot="trigger" slot-scope="{ active }" variant="default">
-            <span>Selected ({{ selectedOptions2.length }})</span>
-            <o-icon :icon="active ? 'chevron-up' : 'chevron-down'" />
-          </o-button>
+      <!-- ROW #2 -->
+      <div class="grid grid-cols-3">
+        <o-field label="bottom right">
+          <o-dropdown
+            v-model="selectedOptions2"
+            position="bottom-right"
+            aria-role="list"
+            multiple
+          >
+            <o-button slot="trigger" slot-scope="{ active }" variant="default">
+              <span>Selected ({{ selectedOptions2.length }})</span>
+              <o-icon class="ml-2 -mr-1" :icon="active ? 'chevron-up' : 'chevron-down'" />
+            </o-button>
 
-          <div class="p-1 space-y-1">
-            <o-dropdown-item value="option1" aria-role="listitem">
-              <span>Option 1</span>
-            </o-dropdown-item>
+            <div class="p-1 space-y-1">
+              <o-dropdown-item value="option1" aria-role="listitem">
+                <span>Option 1</span>
+              </o-dropdown-item>
 
-            <o-dropdown-item value="option2" aria-role="listitem">
-              <span>Option 2</span>
-            </o-dropdown-item>
+              <o-dropdown-item value="option2" aria-role="listitem">
+                <span>Option 2</span>
+              </o-dropdown-item>
 
-            <o-dropdown-item value="option3" aria-role="listitem">
-              <span>Option 3</span>
-            </o-dropdown-item>
-          </div>
-        </o-dropdown>
+              <o-dropdown-item value="option3" aria-role="listitem">
+                <span>Option 3</span>
+              </o-dropdown-item>
+            </div>
+          </o-dropdown>
+        </o-field>
 
-        <p class="p-2 text-sm text-primary">
+        <p class="col-span-2 p-2 text-sm text-primary">
           <b>selected</b>: {{ selectedOptions2 }}
         </p>
       </div>
 
-      <div class="flex items-center space-x-10">
-        <span class="w-24">Top left:</span>
-        <o-dropdown
-          v-model="selectedOptions3"
-          position="top-left"
-          aria-role="list"
-          multiple
-        >
-          <!-- The selected/default item within the dropdown -->
-          <o-button slot="trigger" slot-scope="{ active }" variant="default">
-            <span>Selected ({{ selectedOptions3.length }})</span>
-            <o-icon :icon="active ? 'chevron-up' : 'chevron-down'" />
-          </o-button>
+      <!-- ROW #3 -->
+      <div class="grid grid-cols-3">
+        <o-field label="top left">
+          <o-dropdown
+            v-model="selectedOptions3"
+            position="top-left"
+            aria-role="list"
+            multiple
+          >
+            <o-button slot="trigger" slot-scope="{ active }" variant="default">
+              <span>Selected ({{ selectedOptions3.length }})</span>
+              <o-icon class="ml-2 -mr-1" :icon="active ? 'chevron-up' : 'chevron-down'" />
+            </o-button>
 
-          <div class="p-1 space-y-1">
-            <o-dropdown-item value="option1" aria-role="listitem">
-              <span>Option 1</span>
-            </o-dropdown-item>
+            <div class="p-1 space-y-1">
+              <o-dropdown-item value="option1" aria-role="listitem">
+                <span>Option 1</span>
+              </o-dropdown-item>
 
-            <o-dropdown-item value="option2" aria-role="listitem">
-              <span>Option 2</span>
-            </o-dropdown-item>
+              <o-dropdown-item value="option2" aria-role="listitem">
+                <span>Option 2</span>
+              </o-dropdown-item>
 
-            <o-dropdown-item value="option3" aria-role="listitem">
-              <span>Option 3</span>
-            </o-dropdown-item>
-          </div>
-        </o-dropdown>
+              <o-dropdown-item value="option3" aria-role="listitem">
+                <span>Option 3</span>
+              </o-dropdown-item>
+            </div>
+          </o-dropdown>
+        </o-field>
 
-        <p class="p-2 text-sm text-primary">
+        <p class="col-span-2 p-2 text-sm text-primary">
           <b>selected</b>: {{ selectedOptions3 }}
         </p>
       </div>
 
-      <div class="flex items-center space-x-10">
-        <span class="w-24">Top right:</span>
-        <o-dropdown
-          v-model="selectedOptions4"
-          position="top-right"
-          aria-role="list"
-          multiple
-        >
-          <!-- The selected/default item within the dropdown -->
-          <o-button slot="trigger" slot-scope="{ active }" variant="default">
-            <span>Selected ({{ selectedOptions4.length }})</span>
-            <o-icon :icon="active ? 'chevron-up' : 'chevron-down'" />
-          </o-button>
+      <!-- ROW #4 -->
+      <div class="grid grid-cols-3">
+        <o-field label="top right">
+          <o-dropdown
+            v-model="selectedOptions4"
+            position="top-right"
+            aria-role="list"
+            multiple
+          >
+            <o-button slot="trigger" slot-scope="{ active }" variant="default">
+              <span>Selected ({{ selectedOptions4.length }})</span>
+              <o-icon class="ml-2 -mr-1" :icon="active ? 'chevron-up' : 'chevron-down'" />
+            </o-button>
 
-          <div class="p-1 space-y-1">
-            <o-dropdown-item value="option1" aria-role="listitem">
-              <span>Option 1</span>
-            </o-dropdown-item>
+            <div class="p-1 space-y-1">
+              <o-dropdown-item value="option1" aria-role="listitem">
+                <span>Option 1</span>
+              </o-dropdown-item>
 
-            <o-dropdown-item value="option2" aria-role="listitem">
-              <span>Option 2</span>
-            </o-dropdown-item>
+              <o-dropdown-item value="option2" aria-role="listitem">
+                <span>Option 2</span>
+              </o-dropdown-item>
 
-            <o-dropdown-item value="option3" aria-role="listitem">
-              <span>Option 3</span>
-            </o-dropdown-item>
-          </div>
-        </o-dropdown>
+              <o-dropdown-item value="option3" aria-role="listitem">
+                <span>Option 3</span>
+              </o-dropdown-item>
+            </div>
+          </o-dropdown>
+        </o-field>
 
-        <p class="p-2 text-sm text-primary">
+        <p class="col-span-2 p-2 text-sm text-primary">
           <b>selected</b>: {{ selectedOptions4 }}
         </p>
       </div>
+
+      <!-- ROW #5 -->
+      <div class="grid grid-cols-3">
+        <o-field label="Minimalistic">
+          <o-dropdown
+            v-model="selectedOptions5"
+            position="bottom-left"
+            aria-role="list"
+            multiple
+            class="flex justify-end mr-8"
+          >
+            <!-- The selected/default item within the dropdown -->
+            <o-button slot="trigger" variant="minimal">
+              <span class="sr-only">Open options</span>
+              <o-icon class="text-right" icon="dots-vertical" />
+            </o-button>
+
+            <div class="p-1 space-y-1">
+              <o-dropdown-item value="option1" aria-role="listitem">
+                <span>Option 1</span>
+              </o-dropdown-item>
+
+              <o-dropdown-item value="option2" aria-role="listitem">
+                <span>Option 2</span>
+              </o-dropdown-item>
+
+              <o-dropdown-item value="option3" aria-role="listitem">
+                <span>Option 3</span>
+              </o-dropdown-item>
+            </div>
+          </o-dropdown>
+        </o-field>
+
+        <p class="col-span-2 p-2 text-sm text-primary">
+          <b>selected</b>: {{ selectedOptions5 }}
+        </p>
+      </div>
+
+      <ComponentFooter>
+        <li>Top left / Top right might not be necessary?</li>
+        <li>Minimalistic version needs fix</li>
+      </ComponentFooter>
     </div>
   </section>
 </template>
@@ -174,13 +223,13 @@ export default {
   @apply ring-1 ring-black ring-opacity-5 focus:outline-none;
 }
 .dropdown-position-top-left {
-  @apply bottom-0 right-0 mb-2;
+  @apply bottom-0 right-0;
 }
 .dropdown-position-top-right {
-  @apply bottom-0 left-0 mb-2;
+  @apply bottom-0 left-0;
 }
 .dropdown-position-bottom-left {
-  @apply right-0 mt-2;
+  @apply right-0;
 }
 .dropdown-position-bottom-right {
   @apply left-0;
