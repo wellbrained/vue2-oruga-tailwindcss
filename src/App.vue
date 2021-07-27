@@ -4,6 +4,8 @@ import Button from '@/components/Button.vue'
 import Datepicker from '@/components/Datepicker.vue'
 import Dropdown from '@/components/Dropdown.vue'
 import Select from '@/components/Select.vue'
+import Switch from '@/components/Switch.vue'
+import Radio from '@/components/Radio.vue'
 
 export default {
   name: 'App',
@@ -11,6 +13,8 @@ export default {
     PageHeader,
     Button,
     Dropdown,
+    Radio,
+    RwtSwitch: Switch,
     Select,
     Datepicker,
   },
@@ -27,6 +31,8 @@ export default {
         <Datepicker />
         <Dropdown />
         <Select />
+        <RwtSwitch />
+        <Radio />
       </div>
     </div>
   </div>
